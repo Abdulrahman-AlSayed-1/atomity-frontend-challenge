@@ -102,8 +102,8 @@ export function ConnectionLines({ animate, providers }: ConnectionLinesProps) {
  fill={path.color}
  opacity={0.9}
  style={{ filter: `drop-shadow(0 0 1px ${path.color})` }}
- initial={{ offsetDistance: "0%" } as Record<string, unknown>}
- animate={{ offsetDistance: "100%" } as Record<string, unknown>}
+ initial={{ offsetDistance: "0%" } as any}
+ animate={{ offsetDistance: "100%" } as any}
  transition={{
  duration: 2.5,
  delay: 1.5 + i * 0.15,
