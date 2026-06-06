@@ -60,7 +60,7 @@ export function CentralChart({
       animate={animate ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
       transition={{ type: "spring", stiffness: 120, damping: 20, delay: 0.3 }}
       // FIX 1: Forced a flex column stack layout to create rigid boundaries between sections
-      className="relative flex flex-col rounded-2xl overflow-hidden w-full max-w-[440px] z-10"
+      className="relative flex flex-col rounded-2xl overflow-hidden w-full max-w-110"
       style={{
         background: "var(--color-bg-glass)",
         backdropFilter: "blur(20px)",
@@ -83,7 +83,7 @@ export function CentralChart({
 
       {/* Header — Isolated row with isolated layout columns */}
       <div
-        className="grid grid-cols-2 items-center p-5 pb-5 border-b gap-4 relative z-10 shrink-0 select-none"
+        className="grid grid-cols-2 items-center p-5! pb-5! border-b gap-4 relative z-10 shrink-0 select-none"
         style={{ borderColor: "var(--color-border-surface)" }}
       >
         {/* Left Side: Resource Spend Stack */}
@@ -94,7 +94,7 @@ export function CentralChart({
           >
             Resource Spend
           </p>
-          <div className="flex items-baseline mt-1.5 max-w-full">
+          <div className="flex items-baseline mt-1.5! max-w-full">
             <motion.span
               className="text-2xl font-bold font-mono tracking-tight text-left truncate block"
               style={{ color: "var(--color-text-primary)" }}
@@ -112,7 +112,7 @@ export function CentralChart({
             </motion.span>
             {!isLoading && !isError && (
               <span
-                className="text-xs font-normal ml-1 shrink-0"
+                className="text-xs font-normal ml-1! shrink-0"
                 style={{ color: "var(--color-text-muted)" }}
               >
                 /mo
@@ -123,7 +123,7 @@ export function CentralChart({
 
         {/* Right Side: Estimated Savings Badge Stack */}
         <div
-          className="flex flex-col items-end justify-center gap-1 py-2 px-4 rounded-xl text-right justify-self-end w-full max-w-[170px]"
+          className="flex flex-col items-end justify-center gap-1 py-2! px-4! rounded-xl text-right justify-self-end w-full"
           style={{
             background: "var(--color-accent-savings-bg)",
             border: "1px solid var(--color-border-strong)",
@@ -145,7 +145,7 @@ export function CentralChart({
       </div>
 
       {/* Bar chart content section — Completely isolated from the top grid */}
-      <div className="p-6 pt-6 pb-6 relative z-10 flex-1 w-full mt-auto">
+      <div className="p-6! pt-6! pb-6! relative z-10 flex-1 w-full mt-auto">
         {isError ? (
           <div
             className="flex items-center justify-center h-40 text-sm rounded-lg"
@@ -158,7 +158,7 @@ export function CentralChart({
           </div>
         ) : (
           <figure aria-label="Bar chart of cloud resources by cost" className="w-full">
-            <div className="flex items-end justify-center gap-4 min-h-[140px]">
+            <div className="flex items-end justify-center gap-4 min-h-35">
               {displayResources.map((resource, i) => (
                 <ResourceBar
                   key={resource.id}
@@ -181,7 +181,7 @@ export function CentralChart({
 
       {/* Loading skeleton overlay — Constrained within container layout context */}
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-[var(--color-bg-glass)] backdrop-blur-sm z-20">
+        <div className="absolute inset-0 flex items-center justify-center bg-(--color-bg-glass) backdrop-blur-sm z-20">
           <div
             className="flex gap-4 items-end justify-center pt-16"
             aria-label="Loading resource data"

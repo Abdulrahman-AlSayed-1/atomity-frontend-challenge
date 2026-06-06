@@ -23,10 +23,12 @@ interface MetricRowProps {
 function MetricRow({ label, value, highlight = false }: MetricRowProps) {
   return (
     <div
-      className="flex flex-col gap-0.5 pl-12 p-3 text-left"
+      className="flex flex-col gap-0.5 pl-12! p-3! text-left"
       style={{
         borderRight: "1px solid var(--color-border-surface)",
-        background: highlight ? "var(--color-accent-savings-bg)" : "transparent",
+        background: highlight
+          ? "var(--color-accent-savings-bg)"
+          : "transparent",
       }}
     >
       <span
@@ -101,7 +103,7 @@ export function PodTooltip({
         >
           {/* Header */}
           <div
-            className="flex items-center gap-2 border-b p-4 pl-12"
+            className="flex items-center gap-2 border-b p-4! pl-12!"
             style={{
               borderColor: "var(--color-border-surface)",
               background: `${providerColor}11`,

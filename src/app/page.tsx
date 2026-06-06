@@ -15,7 +15,7 @@ export default function Home() {
     >
       {/* ─── NAV ──────────────────────────────────────────────── */}
       <nav
-        className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 md:px-12"
+        className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6! py-4!! md:px-12!"
         style={{
           background: "var(--color-bg-glass)",
           backdropFilter: "blur(16px)",
@@ -88,7 +88,7 @@ export default function Home() {
           <ThemeToggle />
           <a
             href="#cloud-topology"
-            className="hidden sm:inline-flex items-center justify-center py-2 px-5 rounded-full text-sm font-semibold transition-all duration-200"
+            className="hidden sm:inline-flex items-center justify-center py-2! px-5! rounded-full text-sm font-semibold transition-all duration-200"
             style={{
               background: "var(--color-accent-green-muted)",
               border: "1px solid var(--color-border-strong)",
@@ -157,7 +157,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="inline-flex items-center justify-center gap-2 py-1.5 px-4 rounded-full text-xs font-semibold tracking-widest uppercase"
+            className="inline-flex items-center justify-center gap-2 py-1! px-4! rounded-full text-xs font-semibold tracking-widest uppercase"
             style={{
               background: "var(--color-accent-green-muted)",
               border: "1px solid var(--color-border-strong)",
@@ -211,7 +211,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
             <a
               href="#cloud-topology"
-              className="flex items-center justify-center gap-2 py-3 px-6 rounded-full font-semibold text-base transition-all duration-200 hover:scale-105"
+              className="flex items-center justify-center gap-2 py-3! px-6! rounded-full font-semibold text-base transition-all duration-200 hover:scale-105"
               style={{
                 background: "var(--color-accent-green)",
                 color: "var(--color-text-inverse)",
@@ -224,7 +224,7 @@ export default function Home() {
 
             <a
               href="#"
-              className="flex items-center justify-center gap-2 py-3 px-6 rounded-full font-semibold text-base border transition-all duration-200"
+              className="flex items-center justify-center gap-2 py-3! px-6! rounded-full font-semibold text-base border transition-all duration-200"
               style={{
                 borderColor: "var(--color-border-strong)",
                 color: "var(--color-text-primary)",
@@ -275,7 +275,7 @@ export default function Home() {
 
       {/* ─── FOOTER ───────────────────────────────────────────── */}
       <footer
-        className="border-t flex items-center justify-center py-6"
+        className="border-t flex items-center justify-center py-6!"
         style={{
           borderColor: "var(--color-border-surface)",
           background: "var(--color-bg-secondary)",
